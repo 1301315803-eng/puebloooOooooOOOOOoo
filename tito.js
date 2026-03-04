@@ -4,7 +4,7 @@ console.log("script started");
 let clicks = 0;
 
 //variable to track the number of the levels 
-let clickvalue = 1;
+let clickValue = 1;
 
 //variable to store the click display h1
 let clickDisplay = document.getElementById("click-display")
@@ -23,21 +23,23 @@ function handleClick() {
     console.log("click");
 
     // Add one to click count
-    clicks = clicks + 1;
+    clicks = clicks + clickValue;
 
     //update display
     clickDisplay.innerText = "Clicks: " + clicks;
 
     if (clicks == 10) {
         alert("pop-up alert!");
+       
+    }
+
+    if (clicks >=10) {
+        clickValue = 2;
         levelDisplay.innerText = "leve: 2";
     }
-    else if (clicks >=10) {
-        
-    }
-
-     else if (clicks < 10) {
-      levelDisplay.innerText
-    }
-
 }
+    if (clicks == 50) {
+        alert("congrats we're on level 3");
+        levelDisplay.innerText = "level 3";
+        clickValue = 5; 
+    }
